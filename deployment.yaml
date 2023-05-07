@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-react-app-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-react-app
+  template:
+    metadata:
+      labels:
+        app: my-react-app
+    spec:
+      containers:
+        - name: my-react-app-container
+          image: talha1010/my-react-app
